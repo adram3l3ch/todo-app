@@ -1,7 +1,6 @@
 .todos {
-    background: var(--gray-blue800-2);
     box-shadow: 30px 30px 80px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    background: var(--blue800-ds);
 
     &__empty {
         background: var(--blue800-ds);

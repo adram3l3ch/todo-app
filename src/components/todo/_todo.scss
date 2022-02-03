@@ -8,7 +8,7 @@
     max-height: 4rem;
     position: relative;
     cursor: grab;
-    margin-bottom: 1px;
+    border-bottom: 1px solid var(--gray-blue800-2);
 
     &:first-child {
         border-radius: 5px 5px 0 0;
