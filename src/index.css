@@ -31,7 +31,7 @@ body {
 
 .container {
     width: 95%;
-    max-width: 520px;
+    max-width: 540px;
     position: relative;
     z-index: 2;
 }

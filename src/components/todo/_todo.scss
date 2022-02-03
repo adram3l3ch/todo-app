@@ -2,12 +2,13 @@
     display: flex;
     align-items: center;
     background: var(--blue800-ds);
-    padding: 1.25rem;
-    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    gap: 2rem;
     color: var(--gray-blue400);
     max-height: 4rem;
     position: relative;
     cursor: grab;
+    margin-bottom: 1px;
 
     &:first-child {
         border-radius: 5px 5px 0 0;
