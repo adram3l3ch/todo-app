@@ -1,8 +1,20 @@
 import React from "react";
 import { useGlobalState } from "../../context";
 
+const FooterButton = ({ title }) => {
+    const { setFilter, filter } = useGlobalState();
+    return (
+        <button
+            className={filter === title ? "active" : ""}
+            onClick={() => setFilter(title)}
+        >
+            {title}
+        </button>
+    );
+};
+
 const Footer = () => {
-    const { todos, setFilter, filter, setTodos } = useGlobalState();
+    const { todos, setTodos } = useGlobalState();
     const clearCompleted = () => {
         setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
     };
@@ -13,24 +25,9 @@ const Footer = () => {
                 {todos.filter((todo) => !todo.completed).length} items left
             </p>
             <div className="footer__filter">
-                <button
-                    className={filter === "all" ? "active" : ""}
-                    onClick={() => setFilter("all")}
-                >
-                    All
-                </button>
-                <button
-                    className={filter === "active" ? "active" : ""}
-                    onClick={() => setFilter("active")}
-                >
-                    Active
-                </button>
-                <button
-                    className={filter === "completed" ? "active" : ""}
-                    onClick={() => setFilter("completed")}
-                >
-                    Completed
-                </button>
+                <FooterButton title="all" />
+                <FooterButton title="active" />
+                <FooterButton title="completed" />
             </div>
             <button className="footer__clear" onClick={clearCompleted}>
                 Clear Completed

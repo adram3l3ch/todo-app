@@ -161,7 +161,7 @@ button {
   padding: 1rem 1.5rem;
   gap: 2rem;
   color: var(--gray-blue400);
-  max-height: 4rem;
+  max-height: 10rem;
   position: relative;
   cursor: -webkit-grab;
   cursor: grab;
@@ -287,6 +287,7 @@ button {
 .footer button {
   color: inherit;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .footer button:not(.active):hover {

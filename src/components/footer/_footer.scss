@@ -20,6 +20,7 @@
     button {
         color: inherit;
         cursor: pointer;
+        text-transform: capitalize;
     }
 
     button:not(.active):hover {

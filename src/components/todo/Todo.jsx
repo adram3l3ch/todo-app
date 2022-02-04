@@ -48,7 +48,6 @@ const Todo = ({ todo, index }) => {
     const mouseDown = (e) => {
         todoRef.current.style.cursor = "grabbing";
         todoRef.current.style["z-index"] = "1";
-        todoRef.current.classList.add("dragging");
         setClickedPoint({ x: e.clientX, y: e.clientY });
         document.body.style.userSelect = "none";
     };
@@ -122,9 +121,9 @@ const Todo = ({ todo, index }) => {
             ref={todoRef}
             onMouseDown={(e) => filter === "all" && mouseDown(e)}
         >
-            <div className="todo__circle " onClick={setComplete}>
+            <button className="todo__circle " onClick={setComplete}>
                 <img src={check} alt="check" />
-            </div>
+            </button>
             <h2 className="todo__title">{todo.text}</h2>
             <button
                 className="todo__delete"
